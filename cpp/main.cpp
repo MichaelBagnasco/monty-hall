@@ -10,7 +10,7 @@ int main() {
     uniform_int_distribution<> coinFlip(0, 1); // For the random switch decision
 
 
-    int rounds = 10000,
+    int rounds = 100000000,
             keepWins = 0,
             switchWins = 0,
             randomSwitchWins = 0;

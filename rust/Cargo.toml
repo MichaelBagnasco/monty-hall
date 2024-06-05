@@ -7,3 +7,7 @@ edition = "2021"
 
 [dependencies]
 rand = "0.8.5"
+
+[profile.dev]
+opt-level = 3
+debug = false

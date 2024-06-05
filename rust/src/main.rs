@@ -3,7 +3,7 @@ use std::time::Instant;
 
 fn main() {
     let mut rng = rand::thread_rng();
-    let rounds: u32 = 10000;
+    let rounds: u32 = 100000000;
     let mut keep_wins: u32 = 0;
     let mut switch_wins: u32 = 0;
     let mut random_switch_wins: u32 = 0;
