@@ -23,7 +23,6 @@ int main() {
 
         // Step 2: Randomly choose a contestant's initial door
         int chosenDoor = distr(gen);
-        int revealedDoor;
 
         // Step 3: Determine the door to reveal
         if (chosenDoor == prizeDoor) {
