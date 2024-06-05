@@ -10,7 +10,7 @@ int main() {
     uniform_int_distribution<> coinFlip(0, 1); // For the random switch decision
 
 
-    int rounds = 100000,
+    int rounds = 10000,
             keepWins = 0,
             switchWins = 0,
             randomSwitchWins = 0;
@@ -29,20 +29,11 @@ int main() {
         if (chosenDoor == prizeDoor) {
             // The keep player will never switch, regardless of door reveal, so keep always wins in this scenario
             keepWins++;
-
-            // Prize door is the same as chosen door, reveal one of the other two randomly
-            do {
-                revealedDoor = distr(gen);
-            } while (revealedDoor == chosenDoor);
         } else {
             // The switch player always switches, regardless of the door reveal.
             // The both the initial chosenDoor and the revealed door are always losing doors, so switching is always a win in this scenario
             switchWins++;
 
-            // The revealed door is the other losing door
-            do {
-                revealedDoor = distr(gen);
-            } while (revealedDoor == chosenDoor || revealedDoor == prizeDoor);
         }
 
         bool switchDecision = coinFlip(gen);
